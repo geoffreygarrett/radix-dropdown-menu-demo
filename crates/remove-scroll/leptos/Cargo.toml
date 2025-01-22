@@ -1,0 +1,21 @@
+[package]
+name = "leptos-remove-scroll"
+description = "Leptos port of react-remove-scroll."
+version = "0.1.0"
+edition = "2021"
+authors = ["Rust For Web <info@rustforweb.org>"]
+license = "MIT"
+repository = "https://github.com/RustForWeb/react"
+
+[dependencies]
+leptos = { version = "0.7.1", features = ["csr"] }
+leptos-typed-fallback-show.workspace = true
+leptos-node-ref.workspace = true
+js-sys = "0.3.76"
+web-sys = { version = "0.3.76", features = ["Event", "Window", "TouchEventInit", "TouchEvent", "EventInit"] }
+once_cell = "1.20.2"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.49"
+wasm-bindgen-futures = "0.4.49"
+js-sys = "0.3.76"

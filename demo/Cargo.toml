@@ -1,0 +1,63 @@
+[package]
+name = "dropdown-menu-demo"
+version = "0.1.0"
+edition = "2021"
+authors = ["geoffreygarrett <26066340+geoffreygarrett@users.noreply.github.com>"]
+
+[dependencies]
+# Use the workspace versions of crates where possible:
+leptos = { workspace = true }
+leptos_meta = { workspace = true }
+leptos_router = { workspace = true }
+console_log = { workspace = true }
+log = { workspace = true }
+console_error_panic_hook = { workspace = true }
+leptos-routable = { workspace = true }
+clsx = { workspace = true }
+lucide-leptos = { workspace = true }
+
+leptos-node-ref = { workspace = true }
+leptos-maybe-callback = { workspace = true }
+leptos-typed-fallback-show = { workspace = true }
+
+radix-leptos-avatar = { workspace = true }
+radix-leptos-dropdown-menu = { path = "../crates/dropdown-menu" }
+radix-leptos-menu = { path = "../crates/menu" }
+leptos-remove-scroll = { path = "../crates/remove-scroll/leptos" }
+
+radix-leptos-direction = { workspace = true }
+radix-leptos-primitive = { workspace = true }
+radix-leptos-compose-refs = { workspace = true }
+radix-leptos-label = { workspace = true }
+radix-leptos-id = { workspace = true }
+
+tailwind_fuse = { workspace = true }
+derive_more = { workspace = true }
+codee = { workspace = true }
+leptos-use = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+wasm-bindgen = { workspace = true }
+wasm-bindgen-test = { workspace = true }
+web-sys = { workspace = true }
+
+
+[patch.crates-io]
+leptos-node-ref = { git = "https://github.com/geoffreygarrett/leptos-utils", branch = "feature/any-node-ref" }
+leptos-maybe-callback = { git = "https://github.com/geoffreygarrett/leptos-utils", branch = "feature/maybe-callback" }
+leptos-typed-fallback-show = { git = "https://github.com/geoffreygarrett/leptos-utils", branch = "feature/typed-fallback-show" }
+
+radix-leptos-label = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-label" }
+radix-leptos-primitive = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-primitive" }
+radix-leptos-compose-refs = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-compose-refs" }
+radix-leptos-avatar = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-avatar" }
+radix-leptos-context = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-context" }
+radix-leptos-arrow = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-arrow" }
+radix-leptos-presence = { path = "../crates/presence" }
+radix-leptos-portal = { path = "../crates/portal" }
+radix-leptos-id = { path = "../crates/id" }
+radix-leptos-popper = { path = "../crates/popper" }
+radix-leptos-use-size = { path = "../crates/use-size" }
+radix-leptos-checkbox = { path = "../crates/checkbox" }
+

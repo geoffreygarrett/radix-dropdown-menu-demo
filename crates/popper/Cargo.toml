@@ -1,0 +1,25 @@
+[package]
+name = "radix-leptos-popper"
+description = "Leptos port of Radix Popper."
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+# Leptos ecosystem
+leptos.workspace = true
+leptos-node-ref.workspace = true
+#floating-ui-leptos = { path = "../../../../../floating-ui/packages/leptos" }
+floating-ui-leptos = { version = "0.2.0" }
+radix-leptos-arrow.workspace = true
+radix-leptos-primitive.workspace = true
+radix-leptos-compose-refs.workspace = true
+radix-leptos-use-size.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+web-sys.workspace = true
+
+[patch.crates-io]
+#floating-ui-leptos = { path = "../../../../../floating-ui/packages/leptos" }

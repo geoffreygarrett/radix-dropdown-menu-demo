@@ -1,0 +1,24 @@
+[package]
+name = "radix-leptos-checkbox"
+description = "Leptos port of Radix Checkbox."
+homepage = "https://radix.rustforweb.org/primitives/components/checkbox.html"
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+leptos.workspace = true
+leptos-node-ref.workspace = true
+leptos-use = { version = "0.15.0", features = ["use_event_listener"] }
+radix-leptos-compose-refs.workspace = true
+radix-leptos-presence.workspace = true
+radix-leptos-use-controllable-state.workspace = true
+radix-leptos-use-previous.workspace = true
+radix-leptos-use-size.workspace = true
+radix-leptos-primitive.workspace = true
+web-sys = { workspace = true, features = [
+    "Event",
+    "EventInit"
+]}

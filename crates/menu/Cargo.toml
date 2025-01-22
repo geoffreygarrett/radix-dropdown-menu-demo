@@ -1,0 +1,29 @@
+[package]
+name = "radix-leptos-menu"
+description = "Leptos port of Radix Menu."
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+leptos.workspace = true
+leptos-typed-fallback-show.workspace = true
+leptos-maybe-callback.workspace = true
+leptos-node-ref.workspace = true
+leptos-remove-scroll = { path = "../remove-scroll/leptos" }
+#radix-leptos-collection.workspace = true
+radix-leptos-compose-refs.workspace = true
+radix-leptos-direction.workspace = true
+#radix-leptos-dismissable-layer.workspace = true
+#radix-leptos-focus-guards.workspace = true
+#radix-leptos-focus-scope.workspace = true
+radix-leptos-popper.workspace = true
+radix-leptos-primitive.workspace = true
+radix-leptos-presence.workspace = true
+#radix-leptos-roving-focus.workspace = true
+radix-leptos-portal.workspace = true
+#radix-leptos-checkbox.workspace = true
+radix-leptos-id.workspace = true
+web-sys = { workspace = true, features = ["EventListenerOptions"] }

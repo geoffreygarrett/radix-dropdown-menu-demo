@@ -1,0 +1,22 @@
+[package]
+name = "radix-leptos-dropdown-menu"
+description = "Leptos port of Radix Dropdown Menu."
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+leptos.workspace = true
+leptos-node-ref.workspace = true
+leptos-maybe-callback.workspace = true
+radix-leptos-menu.workspace = true
+#radix-leptos-checkbox.workspace = true
+radix-leptos-direction.workspace = true
+radix-leptos-use-controllable-state.workspace = true
+radix-leptos-compose-refs.workspace = true
+radix-leptos-context.workspace = true
+radix-leptos-id.workspace = true
+radix-leptos-primitive.workspace = true
+web-sys = { workspace = true, features = ["EventListenerOptions"] }

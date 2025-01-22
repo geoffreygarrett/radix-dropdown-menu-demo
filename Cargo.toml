@@ -1,0 +1,93 @@
+[workspace]
+# We name our workspace and list sub-crates:
+members = [
+    "demo",
+    "crates/dropdown-menu",
+    "crates/menu",
+    "crates/remove-scroll/leptos"
+]
+resolver = "2"
+
+[workspace.package]
+name = "dropdown-menu-workspace"
+version = "0.1.0"
+edition = "2021"
+authors = []
+license = "MIT"
+repository = ""
+
+# Pull all shared dependencies in at the workspace level:
+[workspace.dependencies]
+leptos = { version = "0.7", features = ["csr"] }
+leptos_meta = "0.7"
+leptos_router = "0.7"
+console_log = "1"
+log = "0.4"
+console_error_panic_hook = "0.1"
+leptos-routable = "0.1.0"
+clsx = "0.1.0"
+lucide-leptos = "1.1.0"
+leptos_dom = "0.7"
+serde_json = "1.0.137"
+
+leptos-node-ref = { version = "0.0.3" }
+leptos-maybe-callback = { version = "0.0.3" }
+leptos-typed-fallback-show = { version = "0.0.3" }
+
+radix-leptos-avatar = { version = "0.0.2" }
+radix-leptos-direction = { path = "./crates/direction" }
+#radix-leptos-checkbox = { path = "./crates/checkbox" }
+radix-leptos-context = { version = "0.0.2" }
+radix-leptos-id = { path = "./crates/id" }
+radix-leptos-menu = { path = "./crates/menu" } # todo
+#radix-leptos-collection = { version = "0.0.2" } # todo
+radix-leptos-dismissable-layer = { version = "0.0.2" } # todo
+radix-leptos-focus-guards = { version = "0.0.2" } # todo
+radix-leptos-focus-scope = { version = "0.0.2" } # todo
+radix-leptos-popper = { path = "./crates/popper" } # todo
+radix-leptos-portal = { path = "./crates/portal" } # todo
+radix-leptos-presence = { path = "./crates/presence" } # todo
+#radix-leptos-roving-focus = { version = "0.0.2" } # todo
+radix-leptos-primitive = { version = "0.0.2" }
+radix-leptos-compose-refs = { version = "0.0.2" }
+radix-leptos-label = { version = "0.0.2" }
+radix-leptos-arrow = { version = "0.0.2" }
+radix-leptos-use-size = { path = "./crates/use-size" }
+radix-leptos-use-previous = { path = "./crates/use-previous" }
+#radix-leptos-use-controllable-state = { path = "./crates/use-controllable-state" }
+radix-leptos-use-controllable-state = { path = "./crates/use-controllable-state" }
+
+tailwind_fuse = { version = "0.3.2", features = ["variant"] }
+derive_more = { version = "1.0.0", features = ["display"] }
+codee = { version = "0.2.0" }
+leptos-use = "0.15.5"
+serde = { version = "1.0.217" }
+
+# Dev dependencies shared by the workspace:
+wasm-bindgen = "0.2"
+wasm-bindgen-test = "0.3"
+web-sys = { version = "0.3", features = ["Document", "Window"] }
+
+[patch.crates-io]
+leptos-node-ref = { git = "https://github.com/geoffreygarrett/leptos-utils", branch = "feature/any-node-ref" }
+leptos-maybe-callback = { git = "https://github.com/geoffreygarrett/leptos-utils", branch = "feature/maybe-callback" }
+leptos-typed-fallback-show = { git = "https://github.com/geoffreygarrett/leptos-utils", branch = "feature/typed-fallback-show" }
+
+radix-leptos-label = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-label" }
+radix-leptos-primitive = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-primitive" }
+radix-leptos-compose-refs = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-compose-refs" }
+radix-leptos-avatar = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-avatar" }
+radix-leptos-context = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-context" }
+radix-leptos-arrow = { git = "https://github.com/geoffreygarrett/radix", branch = "update/leptos-0.7-arrow" }
+radix-leptos-presence = { path = "./crates/presence" }
+radix-leptos-portal = { path = "./crates/portal" }
+radix-leptos-popper = { path = "./crates/popper" }
+radix-leptos-use-size = { path = "./crates/use-size" }
+#radix-leptos-checkbox = { path = "./crates/checkbox" }
+
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+panic = "abort"

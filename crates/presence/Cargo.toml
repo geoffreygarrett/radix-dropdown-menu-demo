@@ -1,0 +1,18 @@
+[package]
+name = "radix-leptos-presence"
+description = "Leptos port of Radix Presence."
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+[dependencies]
+leptos.workspace = true
+leptos-use.workspace = true
+leptos-typed-fallback-show.workspace = true
+leptos-node-ref.workspace = true
+radix-leptos-primitive.workspace = true
+web-sys = { workspace = true, features = [
+    "CssStyleDeclaration"
+]}
