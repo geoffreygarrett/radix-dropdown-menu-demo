@@ -7,6 +7,7 @@ use crate::components::navigation::app_sidebar::AppSidebar;
 use crate::components::ui::breadcrumb::{Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator};
 use crate::components::ui::separator::{Separator, SeparatorOrientation};
 use crate::components::ui::sidebar::{SidebarInset, SidebarProvider, SidebarTrigger};
+use crate::demo::DropdownMenuDemo;
 
 #[component]
 pub fn Page() -> impl IntoView {
@@ -34,12 +35,13 @@ pub fn Page() -> impl IntoView {
                     </div>
                 </header>
                 <div class="flex flex-1 flex-col gap-4 p-4 pt-0">
-                    <div class="grid auto-rows-min gap-4 md:grid-cols-3">
-                        <div class="aspect-video rounded-xl bg-muted/50" />
-                        <div class="aspect-video rounded-xl bg-muted/50" />
-                        <div class="aspect-video rounded-xl bg-muted/50" />
-                    </div>
-                    <div class="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
+                    <DropdownMenuDemo/>
+                    // <div class="grid auto-rows-min gap-4 md:grid-cols-3">
+                    //     <div class="aspect-video rounded-xl bg-muted/50" />
+                    //     <div class="aspect-video rounded-xl bg-muted/50" />
+                    //     <div class="aspect-video rounded-xl bg-muted/50" />
+                    // </div>
+                    // <div class="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
                 </div>
             </SidebarInset>
         </SidebarProvider>
